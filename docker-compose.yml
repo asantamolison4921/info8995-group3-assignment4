@@ -1,0 +1,19 @@
+services:
+  # Service for compiling x86 binaries
+  compiler-x86:
+    image: gcc:latest  # Using the latest GCC image for x86
+    container_name: c-compiler-x86  # Name of the container for x86 compilation
+    working_dir: /app  # Setting the working directory inside the container
+    volumes:
+      - .:/app  # Mounting the current directory to /app inside the container
+    command: gcc -o output_x86 main.c  # Command to compile the C program into output_x86 binary
+
+  # Service for compiling ARM binaries
+  compiler-arm:
+    image: ubuntu:latest  # Using the latest Ubuntu image as the base
+    container_name: c-compiler-arm  # Name of the container for ARM compilation
+    working_dir: /app  # Setting the working directory inside the container
+    volumes:
+      - .:/app  # Mounting the current directory to /app inside the container
+    command: sh -c "apt-get update && apt-get install -y gcc-arm-linux-gnueabi && arm-linux-gnueabi-gcc -o output_arm main.c"
+    # Updating package lists and installing the ARM cross-compiler, then compiling the C program into output_arm binary

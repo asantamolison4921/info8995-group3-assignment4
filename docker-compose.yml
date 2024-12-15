@@ -17,3 +17,13 @@ services:
       - .:/app  # Mounting the current directory to /app inside the container
     command: sh -c "apt-get update && apt-get install -y gcc-arm-linux-gnueabi && arm-linux-gnueabi-gcc -o output_arm main.c"
     # Updating package lists and installing the ARM cross-compiler, then compiling the C program into output_arm binary
+
+  # Service for pipeline
+  jenkins:
+    image: jenkins/jenkins:lts-jdk17  # Use the Jenkins LTS image with JDK 17
+    ports:
+      - "8080:8080"  # Map port 8080 on the host to port 8080 in the container (Jenkins web interface)
+      - "50000:50000"  # Map port 50000 on the host to port 50000 in the container (Jenkins agent communication)
+    restart: on-failure  # Restart the container if it exits with a non-zero status
+    volumes:
+      - /data/jenkins:/var/jenkins_home  # Bind mount the host directory /data/jenkins to /var/jenkins_home in the container

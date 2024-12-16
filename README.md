@@ -11,7 +11,7 @@ Tools and technologies used in every stage
 
 ```shell
     sudo ./shellscripts/envsetup.sh
-    sudo ./startwebapp.sh
+    sudo ./shellscripts/startwebapp.sh
     sudo ./shellscripts/start_monitoring.sh
 ```
 

@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    environment {
+        GIT_REPO_URL = 'https://github.com/asantamolison4921/info8995-group3-assignment4.git'
+        GIT_BRANCH = 'main'
+    }
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: "${GIT_BRANCH}", url: "${GIT_REPO_URL}"
+            }
+        }
+        stage('Build App') {
+            steps {
+                sh 'mvn -f info8995-webapp/pom.xml clean package'
+            }
+        }
+		stage('Test App') {
+            steps {
+                sh 'mvn -f info8995-webapp/pom.xml test'
+            }
+        }
+    }
+}

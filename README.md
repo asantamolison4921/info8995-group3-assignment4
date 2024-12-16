@@ -5,11 +5,15 @@
 Run the commands below to setup and run the application. The project is making use of Docker but the environment setup is designed to run in Ubuntu machine because of scarcity of time.
 
 Tools and technologies used in every stage
+- set-sample-docker-env.sh - Bash
 - envsetup.sh - Bash, Docker, Maven
 - startwebapp.sh - Bash, Maven, jUnit, Mockito, Docker compose
 - start_monitoring.sh - Bash, Prometheus, Grafana
 
+Execute the below commands in order to setup the environment and run the app
+
 ```shell
+    ./shellscripts/set-sample-docker-env.sh
     sudo ./shellscripts/envsetup.sh
     sudo ./shellscripts/startwebapp.sh
     sudo ./shellscripts/start_monitoring.sh

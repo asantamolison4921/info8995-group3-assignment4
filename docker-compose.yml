@@ -18,9 +18,9 @@ services:
     command: sh -c "apt-get update && apt-get install -y gcc-arm-linux-gnueabi && arm-linux-gnueabi-gcc -o output_arm main.c"
     # Updating package lists and installing the ARM cross-compiler, then compiling the C program into output_arm binary
 
-  # Service for pipeline
+  # Service for Jenkins pipeline
   jenkins:
-    image: jenkins/jenkins:lts-jdk17  # Use the Jenkins LTS image with JDK 17
+    build: ./jenkins  # Build the Docker image using the Dockerfile in the 'jenkins' directory
     ports:
       - "8080:8080"  # Map port 8080 on the host to port 8080 in the container (Jenkins web interface)
       - "50000:50000"  # Map port 50000 on the host to port 50000 in the container (Jenkins agent communication)

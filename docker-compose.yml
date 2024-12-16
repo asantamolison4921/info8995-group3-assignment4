@@ -27,3 +27,12 @@ services:
     restart: on-failure  # Restart the container if it exits with a non-zero status
     volumes:
       - /data/jenkins:/var/jenkins_home  # Bind mount the host directory /data/jenkins to /var/jenkins_home in the container
+
+  # Java web app
+  webapp:  # Name of the service
+    image: info8995-webapp  # Name of the Docker image to use
+    build:  # Configuration for building the Docker image
+      context: ./info8995-webapp  # Path to the directory containing the Dockerfile
+    ports:  # Port mapping between the host and the container
+      - "80:8080"  # Map port 80 on the host to port 8080 on the container
+    container_name: info8995-webapp-container  # Name of the Docker container

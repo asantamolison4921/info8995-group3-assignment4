@@ -4,6 +4,10 @@
 
 Run the commands below to setup and run the application. The project is making use of Docker but the environment setup is designed to run in Ubuntu machine because of scarcity of time.
 
+Tools and technologies used in every stage
+- envsetup.sh - Bash, Docker, Maven
+- startwebapp.sh - Bash, Maven, jUnit, Mockito, Docker compose
+
 ```shell
     sudo ./shellscripts/envsetup.sh
     sudo ./startwebapp.sh

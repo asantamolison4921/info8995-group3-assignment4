@@ -1,8 +1,5 @@
 FROM jenkins/jenkins:lts-jdk17
 
 USER root
-RUN apt-get update && apt-get install -y maven
+RUN apt-get update && apt-get install -y maven docker.io
 USER jenkins
-
-# Copy Jenkinsfile to the Jenkins home directory
-#COPY Jenkinsfile /var/jenkins_home/jobs/java-app-pipeline/config.xml

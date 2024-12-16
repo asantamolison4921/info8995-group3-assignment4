@@ -1,5 +1,13 @@
 # info8995-group3-assignment4
 
+# By Alfred
+
+Run the commands below to setup and run the application. The project is making use of Docker but the environment setup is designed to run in Ubuntu machine because of scarcity of time.
+
+- sudo ./shellscripts/envsetup.sh
+
+# By Leesa
+
 # Ovreview: 
 This project demonstrates how to build and manage x86 and ARM binaries using Docker Compose and Jenkins. The repository includes configuration files for Docker Compose and Jenkins, as well as the necessary source code to compile a simple C program.
 

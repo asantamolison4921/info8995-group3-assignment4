@@ -4,10 +4,10 @@
 cd ../monitoring
 
 # Pull the latest images for Prometheus and Grafana
-docker-compose pull prometheus grafana
+docker compose pull prometheus grafana
 
 # Start only the Prometheus and Grafana services
-docker-compose up -d prometheus grafana
+docker compose up -d prometheus grafana
 
 # Wait for the containers to be fully up and running
 sleep 10

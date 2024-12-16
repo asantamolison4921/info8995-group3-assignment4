@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the monitoring directory
-cd monitoring
+cd ../monitoring
 
 # Pull the latest images
 docker-compose pull

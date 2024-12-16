@@ -27,6 +27,7 @@ services:
     restart: on-failure  # Restart the container if it exits with a non-zero status
     volumes:
       - /data/jenkins:/var/jenkins_home  # Bind mount the host directory /data/jenkins to /var/jenkins_home in the container
+      - /var/run/docker.sock:/var/run/docker.sock  # Bind Docker socket
 
   # Java web app
   webapp:  # Name of the service

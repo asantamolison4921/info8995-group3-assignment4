@@ -7,10 +7,12 @@ Run the commands below to setup and run the application. The project is making u
 Tools and technologies used in every stage
 - envsetup.sh - Bash, Docker, Maven
 - startwebapp.sh - Bash, Maven, jUnit, Mockito, Docker compose
+- start_monitoring.sh - Bash, Prometheus, Grafana
 
 ```shell
     sudo ./shellscripts/envsetup.sh
     sudo ./startwebapp.sh
+    sudo ./shellscripts/start_monitoring.sh
 ```
 
 # By Leesa

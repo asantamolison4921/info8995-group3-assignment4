@@ -2,9 +2,6 @@
 
 echo "This script will create a sample .env file to proceed with demo"
 
-# Navigate to the directory containing the .env-example file
-cd ..
-
 # Rename .env-example to .env
 mv .env-example .env
 

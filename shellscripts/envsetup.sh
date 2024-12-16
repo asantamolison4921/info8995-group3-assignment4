@@ -29,3 +29,6 @@ sudo docker --version
 
 # Install maven
 sudo apt install -y maven
+
+# Creating Jenkins directory
+sudo mkdir -p /data/jenkins 2>/dev/null

@@ -6,7 +6,7 @@ Run the commands below to setup and run the application. The project is making u
 
 ```shell
     sudo ./shellscripts/envsetup.sh
-    sudo startwebapp.sh
+    sudo ./startwebapp.sh
 ```
 
 # By Leesa

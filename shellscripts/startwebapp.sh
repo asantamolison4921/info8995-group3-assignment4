@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Clean and package the Maven project
-mvn -f ../info8995-webapp/pom.xml clean package
+mvn -f info8995-webapp/pom.xml clean package
 
 # Run tests for the Maven project
-mvn -f ../info8995-webapp/pom.xml test
+mvn -f info8995-webapp/pom.xml test
 
 # Stop any running Docker containers with the specified name filter
 sudo docker rm -f $(sudo docker ps -q --filter "name=info8995-group3-assignment4-jenkins-")

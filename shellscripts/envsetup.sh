@@ -26,3 +26,6 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 # Verify Docker installation
 sudo service docker start
 sudo docker --version
+
+# Install maven
+sudo apt install -y maven

@@ -4,7 +4,9 @@
 
 Run the commands below to setup and run the application. The project is making use of Docker but the environment setup is designed to run in Ubuntu machine because of scarcity of time.
 
-- sudo ./shellscripts/envsetup.sh
+```shell
+    sudo ./shellscripts/envsetup.sh
+```
 
 # By Leesa
 
